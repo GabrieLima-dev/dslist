@@ -16,11 +16,11 @@ public class GameService {
     private GameRepository gameRepository;
 
     @Transactional(readOnly = true)
-    public GameDTO findByID(Long id){
+    public GameDTO findById(Long id){
         Game result = gameRepository.findById(id).get();
-        GameDTO dto = new GameDTO(result);
-        return dto;
+        return new GameDTO(result);
     }
+
     @Transactional(readOnly = true)
     public List<GameMinDTO> findAll() {
         List<Game> result = gameRepository.findAll();
