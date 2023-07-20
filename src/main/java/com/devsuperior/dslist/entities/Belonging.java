@@ -12,7 +12,7 @@ public class Belonging {
     @EmbeddedId
     private BelongingPK id = new BelongingPK();
     private Integer position;
-    private Belonging(){
+    public Belonging(){
     }
 
     public Belonging(Game game, GameList list, Integer position) {
